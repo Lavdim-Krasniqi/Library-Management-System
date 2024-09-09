@@ -19,7 +19,7 @@ spring:
     name: Library-Management-System
   data:
     mongodb:
-      database: OAuth2Sample
+      database: tests
       port: ${mongodb.container.port}
       host: localhost
       auto-index-creation: true
