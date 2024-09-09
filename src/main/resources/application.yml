@@ -1,0 +1,31 @@
+spring:
+ config:
+    activate:
+      on-profile: dev
+ application:
+   name: Library-Management-System
+ data:
+   mongodb:
+     uri: mongodb://admin:admin@mongodb:27017/library-management-system
+     auto-index-creation: true
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: test
+  application:
+    name: Library-Management-System
+  data:
+    mongodb:
+      database: OAuth2Sample
+      port: ${mongodb.container.port}
+      host: localhost
+      auto-index-creation: true
+
+---
+
+spring:
+  profiles:
+    active: dev
